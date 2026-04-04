@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Discover Irondequoit</h1>
+    <p class="hero-subtitle">{{ .Site.Params.subtitle }}</p>
+    <div class="search-container" id="search-container">
+      <input type="text" id="search-input" class="search-input" placeholder="Search businesses, services, or categories..." autocomplete="off">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Businesses -->
+{{ $premium := where .Site.RegularPages "Params.premium" true }}
+{{ if $premium }}
+<section class="section featured-section">
+  <div class="section-inner">
+    <h2 class="section-title">Featured Businesses</h2>
+    <p class="section-subtitle">Trusted local businesses recommended by the community.</p>
+    <div class="business-grid business-grid--featured">
+      {{ range $premium }}
+        {{ partial "business-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Browse by Category -->
+<section class="section categories-section">
+  <div class="section-inner">
+    <h2 class="section-title">Browse by Category</h2>
+    <div class="category-grid">
+      {{ range $slug, $cat := site.Data.categories }}
+      <a href="/categories/{{ $slug }}/" class="category-card">
+        <span class="category-icon">{{ $cat.icon }}</span>
+        <h3 class="category-name">{{ $cat.name }}</h3>
+        <p class="category-desc">{{ $cat.description }}</p>
+        {{ $count := len (where $.Site.RegularPages "Params.categories" "intersect" (slice $cat.name)) }}
+        <span class="category-count">{{ $count }} {{ if eq $count 1 }}business{{ else }}businesses{{ end }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- All Businesses -->
+<section class="section all-section">
+  <div class="section-inner">
+    <h2 class="section-title">All Businesses</h2>
+    <p class="section-subtitle">Every local business in our directory.</p>
+    <div class="business-grid">
+      {{ range .Site.RegularPages.ByTitle }}
+        {{ if eq .Section "businesses" }}
+          {{ partial "business-card.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,82 @@
+{{ define "main" }}
+
+{{ $catName := .Data.Term }}
+{{ $catSlug := .Data.Term | urlize }}
+{{ $catData := index site.Data.categories $catSlug }}
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">{{ with $catData }}{{ .name }}{{ else }}{{ $catName | title }}{{ end }}</span>
+    </nav>
+    <h1 class="page-title">
+      {{ with $catData }}{{ .icon }} {{ .name }}{{ else }}{{ $catName | title }}{{ end }}
+    </h1>
+    {{ with $catData }}
+      <p class="page-subtitle">{{ .description }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<!-- Subcategory Filter -->
+{{ with $catData }}
+{{ if .subcategories }}
+<section class="section">
+  <div class="section-inner">
+    <div class="subcategory-pills">
+      <a href="#all" class="pill pill--active" onclick="filterSubcategory('all', this); return false;">All</a>
+      {{ range .subcategories }}
+        <a href="/subcategories/{{ . | urlize }}/" class="pill" onclick="filterSubcategory('{{ . | urlize }}', this); return false;">{{ . }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- Featured in this category -->
+{{ $featured := where .Pages "Params.premium" true }}
+{{ if $featured }}
+<section class="section featured-section">
+  <div class="section-inner">
+    <h2 class="section-title">Featured</h2>
+    <div class="business-grid">
+      {{ range $featured }}
+        {{ partial "business-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- All businesses in category -->
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-title">All {{ with $catData }}{{ .name }}{{ else }}{{ $catName | title }}{{ end }}</h2>
+    <div class="business-grid" id="business-list">
+      {{ range .Pages.ByTitle }}
+        <div class="business-grid-item" data-subcategory="{{ with .Params.subcategories }}{{ index . 0 | urlize }}{{ end }}">
+          {{ partial "business-card.html" . }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<script>
+function filterSubcategory(sub, el) {
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('pill--active'));
+  el.classList.add('pill--active');
+  document.querySelectorAll('.business-grid-item').forEach(item => {
+    if (sub === 'all' || item.dataset.subcategory === sub) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+
+{{ end }}

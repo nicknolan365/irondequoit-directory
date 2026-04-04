@@ -1,0 +1,98 @@
+restaurants:
+  name: "Restaurants"
+  icon: "🍽️"
+  description: "Dine in, take out, or grab a coffee — Irondequoit's best eats."
+  subcategories:
+    - "Sit-Down Dining"
+    - "Pizza"
+    - "Coffee & Bakeries"
+    - "Fast Food & Takeout"
+    - "Bars & Pubs"
+
+home-services:
+  name: "Home Services"
+  icon: "🏠"
+  description: "Trusted local pros to keep your home running right."
+  subcategories:
+    - "Plumbing"
+    - "Electrical"
+    - "HVAC"
+    - "Landscaping & Lawn Care"
+    - "Cleaning"
+    - "Roofing & Exteriors"
+    - "General Contractors"
+
+shopping:
+  name: "Shopping"
+  icon: "🛍️"
+  description: "From groceries to gifts — shop local in Irondequoit."
+  subcategories:
+    - "Grocery & Convenience"
+    - "Clothing & Accessories"
+    - "Gift & Specialty"
+    - "Hardware & Home"
+    - "Pet Supplies"
+
+health--wellness:
+  name: "Health & Wellness"
+  icon: "💚"
+  description: "Doctors, dentists, therapists, and more — care close to home."
+  subcategories:
+    - "Medical & Doctors"
+    - "Dental"
+    - "Chiropractic & Physical Therapy"
+    - "Mental Health"
+    - "Pharmacy"
+    - "Vision Care"
+    - "Fitness & Gyms"
+
+salons--barbers:
+  name: "Salons & Barbers"
+  icon: "💈"
+  description: "Haircuts, color, nails, and spa treatments in Irondequoit."
+  subcategories:
+    - "Hair Salons"
+    - "Barber Shops"
+    - "Nails & Spa"
+
+professional-services:
+  name: "Professional Services"
+  icon: "💼"
+  description: "Tax prep, legal help, insurance, and business services."
+  subcategories:
+    - "Tax & Accounting"
+    - "Legal"
+    - "Insurance"
+    - "Real Estate"
+    - "Financial Planning"
+
+auto--repairs:
+  name: "Auto & Repairs"
+  icon: "🔧"
+  description: "Oil changes to full rebuilds — keep your ride in shape."
+  subcategories:
+    - "Auto Repair"
+    - "Body Shops"
+    - "Tire & Quick Service"
+    - "Car Wash"
+    - "Dealerships"
+
+parks--outdoor:
+  name: "Parks & Outdoor"
+  icon: "🌲"
+  description: "Green spaces, trails, and waterfront spots to explore."
+  subcategories:
+    - "Parks"
+    - "Trails & Nature"
+    - "Sports Fields"
+    - "Waterfront"
+
+activities:
+  name: "Activities"
+  icon: "🎭"
+  description: "Arts, culture, entertainment, and community events."
+  subcategories:
+    - "Arts & Culture"
+    - "Entertainment & Events"
+    - "Youth & Family"
+    - "Community Organizations"

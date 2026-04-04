@@ -1,0 +1,32 @@
+<article class="business-card{{ if .Params.premium }} business-card--premium{{ end }}">
+  <a href="{{ .Permalink }}" class="business-card-link">
+    <div class="business-card-image">
+      {{ if .Params.image }}
+        <img src="/images/businesses/{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+      {{ else }}
+        <div class="business-card-placeholder">
+          {{ with index site.Data.categories (urlize (index .Params.categories 0)) }}
+            <span class="placeholder-icon">{{ .icon }}</span>
+          {{ else }}
+            <span class="placeholder-icon">📍</span>
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ if .Params.premium }}
+        <span class="premium-badge">⭐ Featured</span>
+      {{ end }}
+    </div>
+    <div class="business-card-body">
+      <h3 class="business-card-name">{{ .Title }}</h3>
+      <p class="business-card-tagline">{{ .Params.tagline }}</p>
+      <div class="business-card-meta">
+        {{ with .Params.subcategories }}
+          <span class="business-card-category">{{ index . 0 }}</span>
+        {{ end }}
+        {{ with .Params.address }}
+          <span class="business-card-address">📍 {{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </a>
+</article>

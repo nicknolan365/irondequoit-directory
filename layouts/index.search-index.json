@@ -1,0 +1,16 @@
+{{- $businesses := where .Site.RegularPages "Section" "businesses" -}}
+[
+{{- range $i, $page := $businesses -}}
+  {{- if $i }},{{ end }}
+  {
+    "title": {{ .Title | jsonify }},
+    "tagline": {{ .Params.tagline | default "" | jsonify }},
+    "url": {{ .Permalink | jsonify }},
+    "category": {{ with .Params.categories }}{{ index . 0 | jsonify }}{{ else }}""{{ end }},
+    "subcategory": {{ with .Params.subcategories }}{{ index . 0 | jsonify }}{{ else }}""{{ end }},
+    "address": {{ .Params.address | default "" | jsonify }},
+    "description": {{ .Params.description | default "" | jsonify }},
+    "premium": {{ .Params.premium | default false }}
+  }
+{{- end }}
+]

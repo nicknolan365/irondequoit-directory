@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">Irondequoit<span class="logo-accent">Directory</span></span>
+      <p>{{ .Site.Params.subtitle }}</p>
+    </div>
+    <div class="footer-categories">
+      <h4>Browse</h4>
+      <ul>
+        {{ range .Site.Menus.main }}
+          {{ if ne .Name "Home" }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>About</h4>
+      <p>Irondequoit Directory is your free guide to the businesses, services, and places that make our community great.</p>
+      <p><a href="mailto:hello@irondequoitdirectory.com">hello@irondequoitdirectory.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} Irondequoit Directory. All rights reserved.</p>
+  </div>
+</footer>

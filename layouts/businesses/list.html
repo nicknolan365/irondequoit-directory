@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <h1 class="page-title">All Businesses</h1>
+    <p class="page-subtitle">Every business in the Irondequoit Directory.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="business-grid">
+      {{ range .Pages.ByTitle }}
+        {{ partial "business-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

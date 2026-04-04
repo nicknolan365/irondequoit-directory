@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+{{ $subName := .Data.Term }}
+
+<!-- Figure out parent category -->
+{{ $parentCat := "" }}
+{{ $parentSlug := "" }}
+{{ range .Pages }}
+  {{ with .Params.categories }}
+    {{ $parentCat = index . 0 }}
+    {{ $parentSlug = $parentCat | urlize }}
+  {{ end }}
+{{ end }}
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a>
+      {{ if $parentCat }}
+        <span class="breadcrumb-sep">›</span>
+        <a href="/categories/{{ $parentSlug }}/">{{ $parentCat }}</a>
+      {{ end }}
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">{{ $subName | title }}</span>
+    </nav>
+    <h1 class="page-title">{{ $subName | title }}</h1>
+    <p class="page-subtitle">{{ len .Pages }} {{ if eq (len .Pages) 1 }}business{{ else }}businesses{{ end }} in Irondequoit</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="business-grid">
+      {{ range .Pages.ByTitle }}
+        {{ partial "business-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

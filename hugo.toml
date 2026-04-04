@@ -1,0 +1,66 @@
+baseURL = "https://irondequoitdirectory.com/"
+languageCode = "en-us"
+title = "Irondequoit Directory"
+description = "Your guide to local businesses and services in Irondequoit, NY"
+
+[taxonomies]
+  category = "categories"
+  subcategory = "subcategories"
+
+[params]
+  tagline = "Discover Irondequoit"
+  subtitle = "Your guide to local businesses, services, and things to do in Irondequoit, NY."
+  phone_cta = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Restaurants"
+    url = "/categories/restaurants/"
+    weight = 2
+  [[menu.main]]
+    name = "Home Services"
+    url = "/categories/home-services/"
+    weight = 3
+  [[menu.main]]
+    name = "Shopping"
+    url = "/categories/shopping/"
+    weight = 4
+  [[menu.main]]
+    name = "Health & Wellness"
+    url = "/categories/health--wellness/"
+    weight = 5
+  [[menu.main]]
+    name = "Salons & Barbers"
+    url = "/categories/salons--barbers/"
+    weight = 6
+  [[menu.main]]
+    name = "Professional Services"
+    url = "/categories/professional-services/"
+    weight = 7
+  [[menu.main]]
+    name = "Auto & Repairs"
+    url = "/categories/auto--repairs/"
+    weight = 8
+  [[menu.main]]
+    name = "Parks & Outdoor"
+    url = "/categories/parks--outdoor/"
+    weight = 9
+  [[menu.main]]
+    name = "Activities"
+    url = "/categories/activities/"
+    weight = 10
+
+[outputFormats.SearchIndex]
+  baseName = "search-index"
+  mediaType = "application/json"
+  isPlainText = true
+
+[outputs]
+  home = ["HTML", "SearchIndex"]
+
+[markup.goldmark.renderer]
+  unsafe = true

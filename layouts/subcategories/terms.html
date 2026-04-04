@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="page-header-inner">
+    <h1 class="page-title">All Subcategories</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="section-inner">
+    <div class="subcategory-pills">
+      {{ range .Pages }}
+        <a href="{{ .Permalink }}" class="pill">{{ .Title }} ({{ len .Pages }})</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

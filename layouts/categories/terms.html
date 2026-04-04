@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <h1 class="page-title">Browse All Categories</h1>
+    <p class="page-subtitle">Find what you need in Irondequoit.</p>
+  </div>
+</section>
+
+<section class="section categories-section">
+  <div class="section-inner">
+    <div class="category-grid">
+      {{ range $slug, $cat := site.Data.categories }}
+      <a href="/categories/{{ $slug }}/" class="category-card">
+        <span class="category-icon">{{ $cat.icon }}</span>
+        <h3 class="category-name">{{ $cat.name }}</h3>
+        <p class="category-desc">{{ $cat.description }}</p>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

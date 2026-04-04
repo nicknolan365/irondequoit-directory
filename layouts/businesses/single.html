@@ -1,0 +1,163 @@
+{{ define "main" }}
+
+<article class="business-single">
+  <div class="business-single-inner">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <a href="/">Home</a>
+      {{ with .Params.categories }}
+        {{ $cat := index . 0 }}
+        <span class="breadcrumb-sep">›</span>
+        <a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a>
+      {{ end }}
+      {{ with .Params.subcategories }}
+        {{ $sub := index . 0 }}
+        <span class="breadcrumb-sep">›</span>
+        <a href="/subcategories/{{ $sub | urlize }}/">{{ $sub }}</a>
+      {{ end }}
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">{{ .Title }}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="business-header">
+      <div class="business-header-text">
+        <div class="business-title-row">
+          <h1 class="business-name">{{ .Title }}</h1>
+          {{ if .Params.premium }}
+            <span class="premium-badge premium-badge--lg">⭐ Featured Business</span>
+          {{ end }}
+        </div>
+        <p class="business-tagline">{{ .Params.tagline }}</p>
+        <div class="business-badges">
+          {{ with .Params.subcategories }}
+            {{ range . }}
+              <a href="/subcategories/{{ . | urlize }}/" class="badge badge--sub">{{ . }}</a>
+            {{ end }}
+          {{ end }}
+          {{ with .Params.categories }}
+            {{ range . }}
+              <a href="/categories/{{ . | urlize }}/" class="badge badge--cat">{{ . }}</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </header>
+
+    <div class="business-layout">
+
+      <!-- Main Content -->
+      <div class="business-main">
+
+        <!-- Hero Image -->
+        <div class="business-image-hero">
+          {{ if .Params.image }}
+            <img src="/images/businesses/{{ .Params.image }}" alt="{{ .Title }}">
+          {{ else }}
+            <div class="business-image-placeholder">
+              {{ with index site.Data.categories (urlize (index .Params.categories 0)) }}
+                <span class="placeholder-icon placeholder-icon--lg">{{ .icon }}</span>
+              {{ else }}
+                <span class="placeholder-icon placeholder-icon--lg">📍</span>
+              {{ end }}
+              <span class="placeholder-text">Photo coming soon</span>
+            </div>
+          {{ end }}
+        </div>
+
+        <!-- Description -->
+        {{ with .Params.description }}
+        <section class="business-section">
+          <h2>About</h2>
+          <p>{{ . }}</p>
+        </section>
+        {{ end }}
+
+        <!-- Content (if any markdown body) -->
+        {{ if .Content }}
+        <section class="business-section">
+          {{ .Content }}
+        </section>
+        {{ end }}
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="business-sidebar">
+
+        <!-- Contact Card -->
+        <div class="sidebar-card">
+          <h3>Contact Info</h3>
+
+          {{ with .Params.phone }}
+          <div class="contact-row">
+            <span class="contact-icon">📞</span>
+            <a href="tel:{{ . | replaceRE "[^0-9+]" "" }}">{{ . }}</a>
+          </div>
+          {{ end }}
+
+          {{ with .Params.address }}
+          <div class="contact-row">
+            <span class="contact-icon">📍</span>
+            <a href="https://www.google.com/maps/search/{{ . | urlquery }}" target="_blank" rel="noopener">{{ . }}</a>
+          </div>
+          {{ end }}
+
+          {{ with .Params.website }}
+          <div class="contact-row">
+            <span class="contact-icon">🌐</span>
+            {{ if $.Params.premium }}
+              <a href="{{ . }}" target="_blank" rel="noopener">Visit Website</a>
+            {{ else }}
+              <a href="{{ . }}" target="_blank" rel="noopener nofollow">Visit Website</a>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{ with .Params.email }}
+          <div class="contact-row">
+            <span class="contact-icon">✉️</span>
+            <a href="mailto:{{ . }}">{{ . }}</a>
+          </div>
+          {{ end }}
+        </div>
+
+        <!-- Hours Card -->
+        {{ with .Params.hours }}
+        <div class="sidebar-card">
+          <h3>Business Hours</h3>
+          <table class="hours-table">
+            {{ with .sunday }}<tr><td>Sunday</td><td>{{ . }}</td></tr>{{ end }}
+            {{ with .monday }}<tr><td>Monday</td><td>{{ . }}</td></tr>{{ end }}
+            {{ with .tuesday }}<tr><td>Tuesday</td><td>{{ . }}</td></tr>{{ end }}
+            {{ with .wednesday }}<tr><td>Wednesday</td><td>{{ . }}</td></tr>{{ end }}
+            {{ with .thursday }}<tr><td>Thursday</td><td>{{ . }}</td></tr>{{ end }}
+            {{ with .friday }}<tr><td>Friday</td><td>{{ . }}</td></tr>{{ end }}
+            {{ with .saturday }}<tr><td>Saturday</td><td>{{ . }}</td></tr>{{ end }}
+          </table>
+        </div>
+        {{ end }}
+
+        <!-- Map Embed -->
+        {{ with .Params.address }}
+        <div class="sidebar-card sidebar-card--map">
+          <h3>Location</h3>
+          <div class="map-embed">
+            <iframe
+              width="100%"
+              height="250"
+              style="border:0; border-radius: 8px;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q={{ . | urlquery }}&output=embed">
+            </iframe>
+          </div>
+        </div>
+        {{ end }}
+
+      </aside>
+    </div>
+  </div>
+</article>
+
+{{ end }}
