@@ -695,6 +695,135 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 480px) {
-  .category-grid { grid-template-columns: 1fr; }
+  .category-grid, .category-grid--3col { grid-template-columns: 1fr; }
   .header-inner { padding: 0 16px; }
+  .cta-banner { flex-direction: column; text-align: center; }
+}
+
+/* ===== HERO EYEBROW ===== */
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+/* ===== 3-COLUMN CATEGORY GRID ===== */
+.category-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===== SECTION CTA ===== */
+.section-cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+.btn--outline:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn--primary {
+  background: var(--gold);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background: var(--gold-light);
+  color: var(--white);
+}
+
+/* ===== CTA BANNER ===== */
+.cta-section {
+  padding: 60px 24px;
+}
+
+.cta-banner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--green);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cta-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.cta-subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.cta-banner .btn--primary {
+  flex-shrink: 0;
+  font-size: 1.05rem;
+  padding: 14px 32px;
+}
+
+/* ===== FOOTER QUICK LINKS ===== */
+.footer-contact ul {
+  list-style: none;
+}
+.footer-contact li {
+  margin-bottom: 8px;
+}
+.footer-contact ul a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-contact ul a:hover {
+  color: var(--white);
+}
+
+/* ===== RESPONSIVE OVERRIDES ===== */
+@media (max-width: 900px) {
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-grid--3col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-grid--3col {
+    grid-template-columns: 1fr;
+  }
 }

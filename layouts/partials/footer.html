@@ -7,17 +7,20 @@
     <div class="footer-categories">
       <h4>Browse</h4>
       <ul>
-        {{ range .Site.Menus.main }}
-          {{ if ne .Name "Home" }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-          {{ end }}
+        {{ range $slug, $cat := site.Data.categories }}
+          <li><a href="/categories/{{ $slug }}/">{{ $cat.name }}</a></li>
         {{ end }}
       </ul>
     </div>
     <div class="footer-contact">
-      <h4>About</h4>
-      <p>Irondequoit Directory is your free guide to the businesses, services, and places that make our community great.</p>
-      <p><a href="mailto:hello@irondequoitdirectory.com">hello@irondequoitdirectory.com</a></p>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="{{ .Site.Params.stripe_url | default "#" }}" target="_blank" rel="noopener">Add Your Business</a></li>
+      </ul>
+      <p style="margin-top: 12px;"><a href="mailto:hello@irondequoitdirectory.com">hello@irondequoitdirectory.com</a></p>
     </div>
   </div>
   <div class="footer-bottom">

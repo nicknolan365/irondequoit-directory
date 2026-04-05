@@ -9,9 +9,7 @@
     </button>
     <nav class="main-nav">
       {{ range .Site.Menus.main }}
-        {{ if ne .Name "Home" }}
         <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
-        {{ end }}
       {{ end }}
     </nav>
   </div>

@@ -3,8 +3,9 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-inner">
-    <h1 class="hero-title">Discover Irondequoit</h1>
-    <p class="hero-subtitle">{{ .Site.Params.subtitle }}</p>
+    <p class="hero-eyebrow">Your neighborhood business guide</p>
+    <h1 class="hero-title">Discover Irondequoit's Local Businesses</h1>
+    <p class="hero-subtitle">Supporting the shops, restaurants, and services that make our community special. Find what you need, right in your neighborhood.</p>
     <div class="search-container" id="search-container">
       <input type="text" id="search-input" class="search-input" placeholder="Search businesses, services, or categories..." autocomplete="off">
       <div id="search-results" class="search-results"></div>
@@ -32,7 +33,7 @@
 <section class="section categories-section">
   <div class="section-inner">
     <h2 class="section-title">Browse by Category</h2>
-    <div class="category-grid">
+    <div class="category-grid category-grid--3col">
       {{ range $slug, $cat := site.Data.categories }}
       <a href="/categories/{{ $slug }}/" class="category-card">
         <span class="category-icon">{{ $cat.icon }}</span>
@@ -43,21 +44,36 @@
       </a>
       {{ end }}
     </div>
+    <div class="section-cta">
+      <a href="/categories/" class="btn btn--outline">View All &rarr;</a>
+    </div>
   </div>
 </section>
 
-<!-- All Businesses -->
-<section class="section all-section">
+<!-- Recently Added -->
+{{ $recent := first 5 (where .Site.RegularPages "Section" "businesses").ByDate.Reverse }}
+{{ if $recent }}
+<section class="section recently-added-section">
   <div class="section-inner">
-    <h2 class="section-title">All Businesses</h2>
-    <p class="section-subtitle">Every local business in our directory.</p>
+    <h2 class="section-title">Recently Added</h2>
+    <p class="section-subtitle">The newest businesses in our directory.</p>
     <div class="business-grid">
-      {{ range .Site.RegularPages.ByTitle }}
-        {{ if eq .Section "businesses" }}
-          {{ partial "business-card.html" . }}
-        {{ end }}
+      {{ range $recent }}
+        {{ partial "business-card.html" . }}
       {{ end }}
     </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Add Your Business CTA -->
+<section class="section cta-section">
+  <div class="cta-banner">
+    <div class="cta-text">
+      <h2 class="cta-title">Own a business in Irondequoit?</h2>
+      <p class="cta-subtitle">Get listed in the directory — free or featured. Reach your neighbors where they're already looking.</p>
+    </div>
+    <a href="{{ .Site.Params.stripe_url | default "#" }}" class="btn btn--primary" target="_blank" rel="noopener">Add Your Business</a>
   </div>
 </section>
 
