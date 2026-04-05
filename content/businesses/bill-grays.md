@@ -9,7 +9,7 @@ address: "691 Titus Avenue, Rochester, NY 14617"
 website: "https://billgrays.com"
 email: ""
 image: ""
-premium: true
+premium: false
 categories:
   - "Restaurants"
 subcategories:

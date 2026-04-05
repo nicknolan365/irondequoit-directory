@@ -6,7 +6,7 @@ tagline: "Classic and modern men's cuts, fades, and beard trims."
 description: "A neighborhood barbershop offering classic and modern men's haircuts, fades, and beard trims. Known for consistent, clean cuts and a straightforward, no-frills shop environment, serving both walk-ins and appointments."
 phone: "(585) 489-6788"
 address: "1849 East Ridge Road, Irondequoit, NY 14622"
-website: ""
+website: "https://uniquebarbers.net/"
 email: ""
 image: ""
 premium: false

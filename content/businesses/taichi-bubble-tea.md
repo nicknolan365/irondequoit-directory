@@ -6,7 +6,7 @@ tagline: "Bubble tea, fruit teas, poke bowls, sushi burritos, and ramen."
 description: "Taichi blends authentic Asian flavors with modern twists, offering handcrafted bubble tea and fruit teas alongside a food menu of poke bowls, sushi burritos, and ramen — all made fresh to order. With a wide range of customizable drink and meal options, it's a vibrant spot on East Ridge Road for something different from the usual lunch or dinner routine."
 phone: "(585) 319-5476"
 address: "2255 East Ridge Road, Suite #1, Irondequoit, NY 14622"
-website: ""
+website: "https://www.taichibubbletea.com/"
 email: ""
 image: ""
 premium: false

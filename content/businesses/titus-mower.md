@@ -6,10 +6,10 @@ tagline: "Rochester's go-to shop for outdoor power equipment since 1956."
 description: "Titus Mower has been Rochester's trusted source for outdoor power equipment since 1956. They stock a wide range of new and pre-owned mowers, trimmers, blowers, chainsaws, and snowblowers from brands like STIHL, Honda, Ariens, and Toro — plus a full parts and service department to keep your equipment running season after season. Whether you need a powerful gas machine or want to go cordless with the latest battery technology, the knowledgeable team can help you find the right tool for the job."
 phone: "(585) 266-2370"
 address: "801 Titus Ave, Rochester, NY 14617"
-website: ""
+website: "https://titusmower.com/"
 email: ""
 image: ""
-premium: false
+premium: true
 categories:
   - "Shopping"
 subcategories:

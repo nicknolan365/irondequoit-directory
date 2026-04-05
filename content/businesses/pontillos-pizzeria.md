@@ -6,7 +6,7 @@ tagline: "Classic Rochester-style pizza and Italian favorites."
 description: "A Rochester pizza staple serving thin-crust pies, subs, wings, and pasta dishes. Pontillo's has been a neighborhood favorite for decades with reliable quality and fast delivery throughout Irondequoit."
 phone: "(585) 342-3534"
 address: "1585 Ridge Road East, Rochester, NY 14622"
-website: ""
+website: "https://www.pontilloshudsonridge.com/"
 email: ""
 image: ""
 premium: false

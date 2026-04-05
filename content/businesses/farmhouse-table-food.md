@@ -6,10 +6,10 @@ tagline: "Farm-to-table catering and gourmet prepared foods for any occasion."
 description: "Farmhouse Table Food is a full-service catering and gourmet prepared foods company based in Irondequoit. From casual parties to white-glove affairs, they focus on farm-to-table cooking with ingredients sourced from local suppliers whenever possible. The menu spans a wide variety of cuisines, and every dish is made with the kind of care and quality you'd expect from a company that treats food as a craft, not a commodity."
 phone: "(585) 467-4400"
 address: "1 Whipple Ln #1, Rochester, NY"
-website: ""
+website: "https://farmhousetablefood.com/"
 email: ""
 image: ""
-premium: false
+premium: true
 categories:
   - "Restaurants"
 subcategories:

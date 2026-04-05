@@ -6,7 +6,7 @@ tagline: "Elevated counter-serve burgers, sandwiches, and fresh plates."
 description: "The Market Grill at I-Square pairs fast counter-service ordering with higher-quality ingredients and a polished setting. The menu covers burgers, sandwiches, composed plates, and lighter options like fresh salads. It's a solid choice when you want something better than typical takeout without committing to a full sit-down restaurant — great for a relaxed lunch or an easy weeknight dinner."
 phone: "(585) 266-1111"
 address: "400 Bakers Park, Rochester, NY 14617"
-website: ""
+website: "https://i-square.us/"
 email: ""
 image: ""
 premium: false

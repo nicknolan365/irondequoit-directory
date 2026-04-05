@@ -6,7 +6,7 @@ tagline: "Isshin-Ryū karate and self-defense classes for kids and adults."
 description: "A local martial arts school teaching Isshin-Ryū karate and self-defense. Offers classes for kids and adults of all experience levels, with a focus on discipline, confidence, and personal development."
 phone: "(585) 484-7704"
 address: "1839 East Ridge Road, Irondequoit, NY 14622"
-website: ""
+website: "https://irondequoitmartialarts.com/"
 email: ""
 image: ""
 premium: false

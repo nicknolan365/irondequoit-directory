@@ -6,7 +6,7 @@ tagline: "Expert repairs for all major household appliances."
 description: "Irondequoit Appliance Repair handles everything from simple maintenance to complex repairs on all major household appliances — refrigerators, washers, dryers, dishwashers, ovens, and more. Their team of skilled technicians uses high-quality replacement parts and is committed to timely, reliable service. Whether your fridge is on the fritz or your dryer stopped heating, they're a dependable local call to get your home running smoothly again."
 phone: "(585) 281-5424"
 address: "651 Lakeshore Blvd, Rochester, NY 14617"
-website: ""
+website: "https://www.i-townrepair.com/"
 email: ""
 image: ""
 premium: false

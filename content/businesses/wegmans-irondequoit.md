@@ -9,7 +9,7 @@ address: "525 Titus Avenue, Rochester, NY 14617"
 website: "https://www.wegmans.com"
 email: ""
 image: ""
-premium: true
+premium: false
 categories:
   - "Shopping"
 subcategories:

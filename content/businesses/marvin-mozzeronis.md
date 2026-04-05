@@ -6,7 +6,7 @@ tagline: "Brick-oven pizza, pasta, wings, hoagies, and more."
 description: "Mozzeroni's is a locally owned pizza and Italian-style eatery serving brick-oven pies alongside a wide selection of pasta, hoagies, salads, wings, calzones, and hearty comfort dishes. Known for specialty and NY-style pizzas with plenty of topping options, it works equally well for a quick lunch, a family dinner, or a takeout order. Online ordering and catering are available for parties and events."
 phone: "(585) 323-1700"
 address: "2590 Culver Rd, Irondequoit, NY 14609"
-website: ""
+website: "https://mozzeronis.com/"
 email: ""
 image: ""
 premium: false
