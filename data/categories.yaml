@@ -8,6 +8,7 @@ restaurants:
     - "Coffee & Bakeries"
     - "Fast Food & Takeout"
     - "Bars & Pubs"
+    - "Dessert"
 
 home-services:
   name: "Home Services"
@@ -66,6 +67,8 @@ professional-services:
     - "Insurance"
     - "Real Estate"
     - "Financial Planning"
+    - "Laundry & Dry Cleaning"
+    - "Marketing"
 
 auto--repairs:
   name: "Auto & Repairs"
