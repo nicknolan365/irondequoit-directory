@@ -11,7 +11,7 @@ description = "Your guide to local businesses and services in Irondequoit, NY"
   tagline = "Discover Irondequoit"
   subtitle = "Your guide to local businesses, services, and things to do in Irondequoit, NY."
   phone_cta = true
-  stripe_url = "#"  # Replace with your Stripe payment link
+  stripe_url = "https://buy.stripe.com/14A6oG48J0YcgZG4289IQ0y"  # Replace with your Stripe payment link
 
 [menu]
   [[menu.main]]

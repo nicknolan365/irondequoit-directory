@@ -19,6 +19,6 @@ I try to get back to everyone within **two business days**.
 
 **"Something is wrong with my listing."** Let me know what needs fixing — wrong hours, old phone number, closed location — and I'll update it.
 
-**"I want a featured listing."** Featured businesses get highlighted placement on the homepage and category pages, plus a do-follow link to your website. [Learn more and sign up here](#).
+**"I want a featured listing."** Featured businesses get highlighted placement on the homepage and category pages, plus a do-follow link to your website. [Sign up for a featured listing here](https://buy.stripe.com/14A6oG48J0YcgZG4289IQ0y).
 
 **"I know a great business you should add."** Recommendations are always welcome. If it's in Irondequoit, I want it in the directory.
