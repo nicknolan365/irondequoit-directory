@@ -21,7 +21,7 @@ This directory is a side project built with the same tools and attention I'd giv
 
 Most listings in the directory are free. Featured listings are available for businesses that want a little extra visibility — including a highlighted placement on the homepage and category pages, and a do-follow link to your website for SEO value.
 
-If you're interested in a featured listing, you can [get a featured listing](https://buy.stripe.com/14A6oG48J0YcgZG4289IQ0y) or email me directly.
+If you're interested in a featured listing, you can [learn more about listing options](/add-your-business/) or email me directly.
 
 ## Get in Touch
 
