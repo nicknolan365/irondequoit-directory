@@ -1,7 +1,11 @@
 restaurants:
   name: "Restaurants"
   icon: "🍽️"
-  description: "Dine in, take out, or grab a coffee — Irondequoit's best eats."
+  description: >
+    Irondequoit punches above its weight on food. You've got Rochester
+    institutions like Abbott's and Bill Gray's, real-deal Polish and Mexican
+    places tucked into neighborhoods most people drive past, and a growing
+    coffee and bakery scene along Titus. This is where you'll find your next favorite spot!
   subcategories:
     - "Sit-Down Dining"
     - "Pizza"
@@ -13,7 +17,10 @@ restaurants:
 home-services:
   name: "Home Services"
   icon: "🏠"
-  description: "Trusted local pros to keep your home running right."
+  description: >
+    Most houses in Irondequoit have some age on them, and eventually something
+    breaks. When that happens you want someone local who picks up the phone
+    and shows up when they say they will. Find your local handyman, house cleaner, or plumber.
   subcategories:
     - "Plumbing"
     - "Electrical"
@@ -27,7 +34,10 @@ home-services:
 shopping:
   name: "Shopping"
   icon: "🛍️"
-  description: "From groceries to gifts — shop local in Irondequoit."
+  description: >
+    Wegmans is here. So is House of Guitars, Titus Mower, and a handful of
+    family-run shops that have been in Irondequoit for generations. Some of
+    it you can't find anywhere else.
   subcategories:
     - "Grocery & Convenience"
     - "Clothing & Accessories"
@@ -38,7 +48,10 @@ shopping:
 health--wellness:
   name: "Health & Wellness"
   icon: "💚"
-  description: "Doctors, dentists, therapists, and more — care close to home."
+  description: >
+    Gyms, trainers, nutritionists, and wellness spots around town. Most of
+    it's along East Ridge, with a few independents tucked into the side
+    streets. No need to drive into the city for a good workout.
   subcategories:
     - "Medical & Doctors"
     - "Dental"
@@ -51,7 +64,10 @@ health--wellness:
 salons--barbers:
   name: "Salons & Barbers"
   icon: "💈"
-  description: "Haircuts, color, nails, and spa treatments in Irondequoit."
+  description: >
+    Cuts, color, nails, and skincare — mostly along East Ridge and Titus.
+    Small shops where the person holding the scissors remembers your name and
+    what you said last time about your sister's wedding.
   subcategories:
     - "Hair Salons"
     - "Barber Shops"
@@ -60,7 +76,10 @@ salons--barbers:
 professional-services:
   name: "Professional Services"
   icon: "💼"
-  description: "Tax prep, legal help, insurance, and business services."
+  description: >
+    The kind of help everyone needs eventually — a tailor before a wedding,
+    someone to do your taxes in April, a realtor when it's time to move. Most
+    of these are quiet operations that run on word of mouth.
   subcategories:
     - "Tax & Accounting"
     - "Legal"
@@ -73,7 +92,10 @@ professional-services:
 auto--repairs:
   name: "Auto & Repairs"
   icon: "🔧"
-  description: "Oil changes to full rebuilds — keep your ride in shape."
+  description: >
+    Independent shops, mostly. A few have been on East Ridge or Culver for
+    decades. The kind of places that tell you what actually needs
+    fixing and what can wait another six months.
   subcategories:
     - "Auto Repair"
     - "Body Shops"
@@ -84,7 +106,10 @@ auto--repairs:
 parks--outdoor:
   name: "Parks & Outdoor"
   icon: "🌲"
-  description: "Green spaces, trails, and waterfront spots to explore."
+  description: >
+    Lake Ontario on one side, Irondequoit Bay on the other, and Durand Eastman
+    Park in the middle. For a town this size, there's more shoreline, trail,
+    and open water than most people outside Rochester realize.
   subcategories:
     - "Parks"
     - "Trails & Nature"
@@ -94,7 +119,10 @@ parks--outdoor:
 activities:
   name: "Activities"
   icon: "🎭"
-  description: "Arts, culture, entertainment, and community events."
+  description: >
+    The oldest mini golf course in America is here — really. Plus bowling,
+    karate, a neighborhood art gallery, and the community center. Not a huge
+    list, but there's more to do in town than people give it credit for.
   subcategories:
     - "Arts & Culture"
     - "Entertainment & Events"

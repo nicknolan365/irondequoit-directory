@@ -33,6 +33,7 @@
 <section class="section categories-section">
   <div class="section-inner">
     <h2 class="section-title">Browse by Category</h2>
+    <p class="section-subtitle">Discover businesses in Irondequoit by category.</p>
     <div class="category-grid category-grid--3col">
       {{ range $slug, $cat := site.Data.categories }}
       <a href="/categories/{{ $slug }}/" class="category-card">
@@ -47,6 +48,22 @@
     <div class="section-cta">
       <a href="/categories/" class="btn btn--outline">View All &rarr;</a>
     </div>
+  </div>
+</section>
+
+<!-- About Irondequoit -->
+<section class="section about-section">
+  <div class="section-inner">
+    <h2 class="section-title">About Irondequoit</h2>
+    <p>
+      Irondequoit sits just north of Rochester, wrapped between the Genesee River, Irondequoit Bay, and the shore of Lake Ontario. About 50,000 of us live here across three zip codes &mdash; 14617, 14621, and 14622 &mdash; in a mix of older neighborhoods, lakefront cottages, and the commercial stretches along Titus, East Ridge, and Culver.
+    </p>
+    <p>
+      It's the kind of town where the ice cream stand has been there for three generations, the hardware store knows your name, and the best pizza isn't on any "best of" list outside the town line. Durand Eastman Park is on the lake. Seabreeze runs all summer. I-Square handles a night out.
+    </p>
+    <p>
+      This directory exists to make all of that easier to find &mdash; one place to look up the locksmith, the dentist, the Friday fish fry, and the shop that still sharpens your mower blades. Just neighbors and the businesses that serve them.
+    </p>
   </div>
 </section>
 
