@@ -8,7 +8,7 @@ phone: "(585) 544-3710"
 address: "691 Titus Avenue, Rochester, NY 14617"
 website: "https://billgrays.com"
 email: ""
-image: "/images/businesses/bill-grays.jpg"
+image: "bill-grays.jpg"
 premium: false
 categories:
   - "Restaurants"

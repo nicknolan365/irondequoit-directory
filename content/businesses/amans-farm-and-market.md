@@ -8,7 +8,7 @@ phone: "(585) 544-8360"
 address: "2458 East Ridge Road, Rochester, NY 14622"
 website: "https://www.amansfarmandmarket.com/"
 email: ""
-image: "/images/businesses/amans-farm-market.jpg"
+image: "amans-farm-market.jpg"
 premium: false
 categories:
   - "Shopping"

@@ -8,7 +8,7 @@ phone: "(585) 270-5365"
 address: "690 Titus Ave, Rochester, NY 14617"
 website: ""
 email: ""
-image: "/images/businesses/titus-tavern.jpg"
+image: "titus-tavern.jpg"
 premium: false
 categories:
   - "Restaurants"
