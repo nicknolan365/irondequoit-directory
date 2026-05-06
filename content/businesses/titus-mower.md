@@ -8,7 +8,7 @@ phone: "(585) 266-2370"
 address: "801 Titus Ave, Rochester, NY 14617"
 website: "https://titusmower.com/"
 email: ""
-image: "images/businesses/titus-mower.jpg"
+image: "/images/businesses/titus-mower.jpg"
 premium: true
 categories:
   - "Shopping"

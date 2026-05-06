@@ -8,7 +8,7 @@ phone: ""
 address: "400 Bakers Park, Rochester, NY 14617"
 website: "https://rocmenus.com"
 email: ""
-image: "images/businesses/roc-menus.jpg"
+image: "/images/businesses/roc-menus.jpg"
 premium: true
 categories:
   - "Professional Services"
