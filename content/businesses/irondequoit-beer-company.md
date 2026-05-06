@@ -8,7 +8,7 @@ phone: "(585) 544-3670"
 address: "765 Titus Ave, Rochester, NY 14617"
 website: "https://irondequoitbeercompany.com/"
 email: ""
-image: ""
+image: "images/businesses/irondequoit-beer-co.jpg"
 premium: true
 categories:
   - "Restaurants"
